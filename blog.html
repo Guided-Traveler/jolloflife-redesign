@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Jollof Life | Nigerian Food Culture & Stories</title>
+  <meta name="description" content="Explore Nigerian food culture, recipes, spice guides, and stories from Jollof Life Restaurant in Winnipeg.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .blog-featured {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: var(--space-2xl);
+      background: var(--white);
+      border-radius: var(--border-radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      margin-bottom: var(--space-3xl);
+      transition: transform var(--duration-normal) var(--ease-spring),
+                  box-shadow var(--duration-normal);
+    }
+    .blog-featured:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .blog-featured__image {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+    }
+    .blog-featured__image img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform var(--duration-slow) var(--ease-out);
+    }
+    .blog-featured:hover .blog-featured__image img {
+      transform: scale(1.05);
+    }
+    .blog-featured__body {
+      padding: var(--space-2xl);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .blog-featured__badge {
+      display: inline-block;
+      background: var(--gradient-gold);
+      color: var(--charcoal);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-md);
+      width: fit-content;
+    }
+    @media (max-width: 768px) {
+      .blog-featured { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scroll-progress"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar--transparent">
+    <div class="container">
+      <a href="index.html" class="navbar__logo">
+        <img src="https://jolloflife.ca/wp-content/uploads/2022/12/jolof-life-web-logo-white-1.png" alt="Jollof Life">
+      </a>
+      <div class="navbar__links">
+        <a href="index.html" class="navbar__link">Home</a>
+        <a href="menu.html" class="navbar__link">Menu</a>
+        <a href="about.html" class="navbar__link">About</a>
+        <a href="catering.html" class="navbar__link">Catering</a>
+        <a href="blog.html" class="navbar__link navbar__link--active">Blog</a>
+        <a href="contact.html" class="navbar__link">Contact</a>
+        <a href="https://jollof-life-restaurant.square.site/" target="_blank" rel="noopener" class="navbar__cta">
+          <i class="fas fa-utensils"></i> Order Now
+        </a>
+      </div>
+      <button class="navbar__toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="menu.html" class="mobile-menu__link">Menu</a>
+    <a href="about.html" class="mobile-menu__link">About</a>
+    <a href="catering.html" class="mobile-menu__link">Catering</a>
+    <a href="blog.html" class="mobile-menu__link">Blog</a>
+    <a href="contact.html" class="mobile-menu__link">Contact</a>
+    <a href="https://jollof-life-restaurant.square.site/" target="_blank" rel="noopener" class="mobile-menu__link" style="color: var(--saffron);">Order Online</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero hero--short">
+    <div class="hero__bg" style="background-image: url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=1920&q=80');"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <span class="hero__tagline">Stories & Culture</span>
+      <h1 class="hero__title">Our Blog</h1>
+      <p class="hero__subtitle">Nigerian food culture, recipes, spice guides, and stories from the Jollof Life kitchen</p>
+    </div>
+  </section>
+
+  <!-- Blog Content -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Featured Post -->
+      <a href="blog/spices-herbs-nigerian-cuisine.html" class="blog-featured reveal">
+        <div class="blog-featured__image">
+          <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=80" alt="Nigerian spices and herbs">
+        </div>
+        <div class="blog-featured__body">
+          <span class="blog-featured__badge">Latest Post</span>
+          <span class="blog-card__date">December 15, 2024</span>
+          <h2 style="font-size: 1.6rem; margin-bottom: var(--space-md);">The Role of Spices and Herbs in Nigerian Cuisine</h2>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-lg);">
+            Discover the essential spices and herbs that give Nigerian food its distinctive, bold flavors — from suya spice to locust beans, and everything in between.
+          </p>
+          <span class="blog-card__link">Read Full Article <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <!-- Blog Grid -->
+      <div class="card-grid card-grid--3 reveal-stagger">
+
+        <a href="blog/dietary-requirements.html" class="blog-card">
+          <div class="blog-card__image">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80" alt="Healthy Nigerian food">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__date">November 28, 2024</span>
+            <h3 class="blog-card__title">Dietary Accommodations & Allergies in Nigerian Food</h3>
+            <p class="blog-card__excerpt">How Nigerian cuisine naturally accommodates various dietary needs, and what to know about common allergens in West African cooking.</p>
+            <span class="blog-card__link">Read More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="blog/30-popular-dishes.html" class="blog-card">
+          <div class="blog-card__image">
+            <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=600&q=80" alt="Popular Nigerian dishes">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__date">November 10, 2024</span>
+            <h3 class="blog-card__title">30 Popular Nigerian & West African Dishes You Must Try</h3>
+            <p class="blog-card__excerpt">From Jollof Rice to Pepper Soup, explore the dishes that define West African cuisine and why they're loved around the world.</p>
+            <span class="blog-card__link">Read More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="blog/nigerian-food-culture.html" class="blog-card">
+          <div class="blog-card__image">
+            <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=600&q=80" alt="Nigerian food and culture">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__date">October 22, 2024</span>
+            <h3 class="blog-card__title">Nigerian Food's Role in Cultural Celebrations</h3>
+            <p class="blog-card__excerpt">How food brings communities together during weddings, naming ceremonies, holidays, and everyday gatherings in Nigerian culture.</p>
+            <span class="blog-card__link">Read More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="blog/guide-nigerian-spices.html" class="blog-card">
+          <div class="blog-card__image">
+            <img src="https://images.unsplash.com/photo-1532336414038-cf19250c5757?w=600&q=80" alt="Nigerian spices guide">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__date">October 5, 2024</span>
+            <h3 class="blog-card__title">A Beginner's Guide to Nigerian Spices & Seasonings</h3>
+            <p class="blog-card__excerpt">Everything you need to know about the spices that make Nigerian cooking special — where to find them and how to use them.</p>
+            <span class="blog-card__link">Read More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="section section--dark pattern-overlay">
+    <div class="container">
+      <div class="text-center reveal" style="max-width: 600px; margin: 0 auto;">
+        <span class="section-label">Stay Updated</span>
+        <h2 class="section-heading section-heading--center" style="color: var(--white);">Subscribe to Our Newsletter</h2>
+        <p style="color: rgba(255,255,255,0.7); margin-bottom: var(--space-2xl);">
+          Get new blog posts, exclusive recipes, and special offers delivered to your inbox.
+        </p>
+        <form style="display: flex; gap: var(--space-sm); max-width: 480px; margin: 0 auto;" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed!'; this.querySelector('input').value='';">
+          <input type="email" placeholder="Your email address" required
+            style="flex: 1; padding: 0.85rem 1.2rem; border: 2px solid rgba(255,255,255,0.2); border-radius: 50px; background: rgba(255,255,255,0.08); color: var(--white); outline: none; font-size: 0.95rem;">
+          <button type="submit" class="btn btn--primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="https://jolloflife.ca/wp-content/uploads/2022/12/jolof-life-web-logo-white-1.png" alt="Jollof Life" class="footer__logo">
+          <p>Your one-stop destination for authentic West African and Nigerian cuisine in Winnipeg.</p>
+          <div class="footer__social">
+            <a href="https://www.facebook.com/jollofliferestaurant/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/jollof_life.foods/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/12049632266" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:admin@jolloflife.ca" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Quick Links</h4>
+          <div class="footer__links">
+            <a href="menu.html" class="footer__link">Our Menu</a>
+            <a href="about.html" class="footer__link">About Us</a>
+            <a href="catering.html" class="footer__link">Catering</a>
+            <a href="blog.html" class="footer__link">Blog</a>
+            <a href="contact.html" class="footer__link">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Order Online</h4>
+          <div class="footer__links">
+            <a href="https://jollof-life-restaurant.square.site/" target="_blank" rel="noopener" class="footer__link">Order Direct (Square)</a>
+            <a href="https://www.ubereats.com/ca/store/jollof-life-restaurant/UQO6MkQCXqGsVrcTSQeHDg/" target="_blank" rel="noopener" class="footer__link">Uber Eats</a>
+            <a href="https://www.skipthedishes.com/jollof-rice-portage-avenue" target="_blank" rel="noopener" class="footer__link">Skip The Dishes</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Hours</h4>
+          <div class="footer__links" style="gap: 4px;">
+            <span class="footer__link">Mon: Closed</span>
+            <span class="footer__link">Tue–Fri: 11AM – 8PM</span>
+            <span class="footer__link">Sat: 12PM – 9PM</span>
+            <span class="footer__link">Sun: 12PM – 6PM</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2024 Jollof Life Restaurant. All rights reserved.</span>
+        <span>600 Portage Ave, Winnipeg, MB R3C 3L7</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

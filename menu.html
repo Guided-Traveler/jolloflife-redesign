@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu — Jollof Life | Nigerian & West African Cuisine</title>
+  <meta name="description" content="Explore over 100 authentic Nigerian and West African dishes at Jollof Life. Rice dishes, soups, swallow, sides, and more. Order online for delivery or pickup.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <div class="scroll-progress"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar--transparent">
+    <div class="container">
+      <a href="index.html" class="navbar__logo">
+        <img src="https://jolloflife.ca/wp-content/uploads/2022/12/jolof-life-web-logo-white-1.png" alt="Jollof Life">
+      </a>
+      <div class="navbar__links">
+        <a href="index.html" class="navbar__link">Home</a>
+        <a href="menu.html" class="navbar__link navbar__link--active">Menu</a>
+        <a href="about.html" class="navbar__link">About</a>
+        <a href="catering.html" class="navbar__link">Catering</a>
+        <a href="blog.html" class="navbar__link">Blog</a>
+        <a href="contact.html" class="navbar__link">Contact</a>
+        <a href="https://jollof-life-restaurant.square.site/" target="_blank" rel="noopener" class="navbar__cta">
+          <i class="fas fa-utensils"></i> Order Now
+        </a>
+      </div>
+      <button class="navbar__toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="menu.html" class="mobile-menu__link">Menu</a>
+    <a href="about.html" class="mobile-menu__link">About</a>
+    <a href="catering.html" class="mobile-menu__link">Catering</a>
+    <a href="blog.html" class="mobile-menu__link">Blog</a>
+    <a href="contact.html" class="mobile-menu__link">Contact</a>
+    <a href="https://jollof-life-restaurant.square.site/" target="_blank" rel="noopener" class="mobile-menu__link" style="color: var(--saffron);">Order Online</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero hero--short">
+    <div class="hero__bg" style="background-image: url('https://images.unsplash.com/photo-1555244162-803834f70033?w=1920&q=80');"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <span class="hero__tagline">Taste the Tradition</span>
+      <h1 class="hero__title">Our Menu</h1>
+      <p class="hero__subtitle">Over 100 authentic West African dishes — from classic Jollof to our signature Exclusive Ofada</p>
+    </div>
+  </section>
+
+  <!-- Filter Bar -->
+  <div class="menu-filter">
+    <div class="menu-filter__tabs">
+      <!-- Tabs injected by JS -->
+    </div>
+  </div>
+
+  <!-- Menu Grid -->
+  <section class="section">
+    <div class="container">
+      <div id="menu-grid" class="card-grid card-grid--3">
+        <!-- Cards rendered by JS -->
+      </div>
+
+      <!-- Can't Decide CTA -->
+      <div class="text-center mt-2xl reveal" style="padding: var(--space-2xl); background: var(--warm-gray); border-radius: var(--border-radius-xl);">
+        <h3 style="margin-bottom: var(--space-sm);">Can't Decide?</h3>
+        <p style="max-width: 500px; margin: 0 auto var(--space-lg);">
+          Try our signature <strong>Exclusive Ofada</strong> — a crowd favourite — or browse our Most Popular picks above.
+        </p>
+        <a href="https://jollof-life-restaurant.square.site/" target="_blank" rel="noopener" class="btn btn--primary">
+          Order on Square <i class="fas fa-external-link-alt" style="margin-left: 8px; font-size: 0.8em;"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Platforms -->
+  <section class="section section--dark pattern-overlay">
+    <div class="container">
+      <div class="text-center mb-2xl reveal">
+        <span class="section-label">Multiple Ways to Order</span>
+        <h2 class="section-heading section-heading--center" style="color: var(--white);">Get It Delivered</h2>
+      </div>
+      <div class="card-grid card-grid--3 reveal-stagger">
+        <a href="https://jollof-life-restaurant.square.site/" target="_blank" rel="noopener" class="platform-card">
+          <div class="platform-card__icon"><i class="fas fa-store"></i></div>
+          <h3 class="platform-card__name">Order Direct</h3>
+          <p class="platform-card__desc">Pickup or delivery via Square</p>
+          <span class="btn btn--primary btn--sm">Order Now</span>
+        </a>
+        <a href="https://www.ubereats.com/ca/store/jollof-life-restaurant/UQO6MkQCXqGsVrcTSQeHDg/" target="_blank" rel="noopener" class="platform-card">
+          <div class="platform-card__icon"><i class="fas fa-car"></i></div>
+          <h3 class="platform-card__name">Uber Eats</h3>
+          <p class="platform-card__desc">Delivered across Winnipeg</p>
+          <span class="btn btn--primary btn--sm">Order Now</span>
+        </a>
+        <a href="https://www.skipthedishes.com/jollof-rice-portage-avenue" target="_blank" rel="noopener" class="platform-card">
+          <div class="platform-card__icon"><i class="fas fa-bicycle"></i></div>
+          <h3 class="platform-card__name">Skip The Dishes</h3>
+          <p class="platform-card__desc">Fast delivery — just a tap away</p>
+          <span class="btn btn--primary btn--sm">Order Now</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="https://jolloflife.ca/wp-content/uploads/2022/12/jolof-life-web-logo-white-1.png" alt="Jollof Life" class="footer__logo">
+          <p>Your one-stop destination for authentic West African and Nigerian cuisine in Winnipeg.</p>
+          <div class="footer__social">
+            <a href="https://www.facebook.com/jollofliferestaurant/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/jollof_life.foods/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/12049632266" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:admin@jolloflife.ca" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Quick Links</h4>
+          <div class="footer__links">
+            <a href="menu.html" class="footer__link">Our Menu</a>
+            <a href="about.html" class="footer__link">About Us</a>
+            <a href="catering.html" class="footer__link">Catering</a>
+            <a href="blog.html" class="footer__link">Blog</a>
+            <a href="contact.html" class="footer__link">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Order Online</h4>
+          <div class="footer__links">
+            <a href="https://jollof-life-restaurant.square.site/" target="_blank" rel="noopener" class="footer__link">Order Direct (Square)</a>
+            <a href="https://www.ubereats.com/ca/store/jollof-life-restaurant/UQO6MkQCXqGsVrcTSQeHDg/" target="_blank" rel="noopener" class="footer__link">Uber Eats</a>
+            <a href="https://www.skipthedishes.com/jollof-rice-portage-avenue" target="_blank" rel="noopener" class="footer__link">Skip The Dishes</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Hours</h4>
+          <div class="footer__links" style="gap: 4px;">
+            <span class="footer__link">Mon: Closed</span>
+            <span class="footer__link">Tue–Fri: 11AM – 8PM</span>
+            <span class="footer__link">Sat: 12PM – 9PM</span>
+            <span class="footer__link">Sun: 12PM – 6PM</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2024 Jollof Life Restaurant. All rights reserved.</span>
+        <span>600 Portage Ave, Winnipeg, MB R3C 3L7</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/menu-filter.js"></script>
+</body>
+</html>

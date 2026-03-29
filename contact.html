@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Jollof Life Restaurant, Winnipeg</title>
+  <meta name="description" content="Get in touch with Jollof Life Restaurant. Visit us at 600 Portage Ave, Winnipeg, MB R3C 3L7. Call, WhatsApp, or send us a message.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact Us — Jollof Life Restaurant">
+  <meta property="og:description" content="Reach out to Jollof Life Restaurant. Visit us at 600 Portage Ave, Winnipeg. Call, WhatsApp, or send a message.">
+  <meta property="og:type" content="restaurant">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: var(--space-3xl);
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contact-info-card {
+      background: var(--white);
+      padding: var(--space-xl);
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--duration-normal) var(--ease-spring),
+                  box-shadow var(--duration-normal) var(--ease-out);
+    }
+
+    .contact-info-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-info-card + .contact-info-card {
+      margin-top: var(--space-lg);
+    }
+
+    .contact-info-card__icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(232,163,23,0.1);
+      color: var(--saffron-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-info-card__header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-sm);
+    }
+
+    .contact-info-card__label {
+      font-weight: 700;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+    }
+
+    .contact-info-card__value {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      padding-left: calc(44px + var(--space-md));
+    }
+
+    .contact-info-card__value a {
+      color: var(--saffron-dark);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color var(--duration-fast) var(--ease-out);
+    }
+
+    .contact-info-card__value a:hover {
+      color: var(--pepper-red);
+    }
+
+    .contact-social-links {
+      display: flex;
+      gap: var(--space-md);
+      padding-left: calc(44px + var(--space-md));
+    }
+
+    .contact-social-links a {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--white);
+      transition: transform var(--duration-fast) var(--ease-spring),
+                  opacity var(--duration-fast) var(--ease-out);
+    }
+
+    .contact-social-links a:hover {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+
+    .contact-social-links a.social-fb {
+      background: #1877F2;
+    }
+
+    .contact-social-links a.social-ig {
+      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+
+    .form-group__error {
+      display: none;
+      color: var(--pepper-red);
+      font-size: 0.8rem;
+      margin-top: var(--space-xs);
+      font-weight: 500;
+    }
+
+    .form-group--error .form-group__input,
+    .form-group--error .form-group__textarea {
+      border-color: var(--pepper-red);
+    }
+
+    .form-group--error .form-group__error {
+      display: block;
+    }
+
+    .form-success {
+      text-align: center;
+      padding: var(--space-3xl) var(--space-xl);
+      background: rgba(45,106,79,0.06);
+      border: 2px solid rgba(45,106,79,0.15);
+      border-radius: var(--border-radius-lg);
+    }
+
+    .form-success__icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(45,106,79,0.12);
+      color: var(--palm-green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin: 0 auto var(--space-lg);
+    }
+
+    .form-success__title {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      color: var(--palm-green);
+      margin-bottom: var(--space-sm);
+    }
+
+    .form-success__text {
+      color: var(--text-secondary);
+      margin-bottom: var(--space-xl);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar--transparent">
+    <div class="container">
+      <a href="index.html" class="navbar__logo">
+        <img src="https://jolloflife.ca/wp-content/uploads/2022/12/jolof-life-web-logo-white-1.png" alt="Jollof Life">
+      </a>
+
+      <div class="navbar__links">
+        <a href="index.html" class="navbar__link">Home</a>
+        <a href="menu.html" class="navbar__link">Menu</a>
+        <a href="about.html" class="navbar__link">About</a>
+        <a href="catering.html" class="navbar__link">Catering</a>
+        <a href="blog.html" class="navbar__link">Blog</a>
+        <a href="contact.html" class="navbar__link navbar__link--active">Contact</a>
+        <a href="https://jollof-life-restaurant.square.site/" target="_blank" rel="noopener" class="navbar__cta">
+          <i class="fas fa-utensils"></i> Order Now
+        </a>
+      </div>
+
+      <button class="navbar__toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="menu.html" class="mobile-menu__link">Menu</a>
+    <a href="about.html" class="mobile-menu__link">About</a>
+    <a href="catering.html" class="mobile-menu__link">Catering</a>
+    <a href="blog.html" class="mobile-menu__link">Blog</a>
+    <a href="contact.html" class="mobile-menu__link">Contact</a>
+    <a href="https://jollof-life-restaurant.square.site/" target="_blank" rel="noopener" class="mobile-menu__link" style="color: var(--saffron);">Order Online</a>
+  </div>
+
+  <!-- ========== HERO (Short) ========== -->
+  <section class="hero hero--short">
+    <div class="hero__bg" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80');"></div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content">
+      <span class="hero__tagline">Get in Touch</span>
+      <h1 class="hero__title">Contact Us</h1>
+      <p class="hero__subtitle">We'd love to hear from you</p>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT FORM + INFO ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Left: Contact Form -->
+        <div class="reveal">
+          <span class="section-label">Send a Message</span>
+          <h2 class="section-heading">Drop Us a Line</h2>
+
+          <form id="contact-form" action="#" novalidate>
+            <div class="form-group">
+              <input type="text" id="name" name="name" class="form-group__input" placeholder=" " required autocomplete="name">
+              <label for="name" class="form-group__label">Name</label>
+              <span class="form-group__error">Please enter your name</span>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="email" name="email" class="form-group__input" placeholder=" " required autocomplete="email">
+              <label for="email" class="form-group__label">Email</label>
+              <span class="form-group__error">Please enter a valid email address</span>
+            </div>
+
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" class="form-group__input" placeholder=" " required>
+              <label for="subject" class="form-group__label">Subject</label>
+              <span class="form-group__error">Please enter a subject</span>
+            </div>
+
+            <div class="form-group">
+              <textarea id="message" name="message" class="form-group__textarea" placeholder=" " required rows="5"></textarea>
+              <label for="message" class="form-group__label">Message</label>
+              <span class="form-group__error">Please enter your message</span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--lg" id="submit-btn">
+              Send Message <i class="fas fa-paper-plane" style="margin-left: 8px;"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: Contact Info Cards -->
+        <div class="reveal">
+          <div class="contact-info-card">
+            <div class="contact-info-card__header">
+              <div class="contact-info-card__icon"><i class="fas fa-map-marker-alt"></i></div>
+              <span class="contact-info-card__label">Our Address</span>
+            </div>
+            <div class="contact-info-card__value">
+              <a href="https://www.google.com/maps/search/?api=1&query=600+Portage+Ave+Winnipeg+MB+R3C+3L7" target="_blank" rel="noopener">
+                600 Portage Ave<br>Winnipeg, MB R3C 3L7
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-card__header">
+              <div class="contact-info-card__icon"><i class="fab fa-whatsapp"></i></div>
+              <span class="contact-info-card__label">WhatsApp / Call</span>
+            </div>
+            <div class="contact-info-card__value">
+              <a href="https://wa.me/12049632266" target="_blank" rel="noopener">(204) 963-2266</a>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-card__header">
+              <div class="contact-info-card__icon"><i class="fas fa-envelope"></i></div>
+              <span class="contact-info-card__label">Email Us</span>
+            </div>
+            <div class="contact-info-card__value">
+              <a href="mailto:admin@jolloflife.ca">admin@jolloflife.ca</a>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-card__header">
+              <div class="contact-info-card__icon"><i class="fas fa-share-nodes"></i></div>
+              <span class="contact-info-card__label">Follow Us</span>
+            </div>
+            <div class="contact-social-links">
+              <a href="https://www.facebook.com/jollofliferestaurant/" target="_blank" rel="noopener" aria-label="Facebook" class="social-fb">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/jollof_life.foods/" target="_blank" rel="noopener" aria-label="Instagram" class="social-ig">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOURS ========== -->
+  <section class="section section--warm-gray">
+    <div class="container">
+      <div class="reveal" style="max-width: 600px; margin: 0 auto;">
+        <div class="text-center mb-2xl">
+          <span class="section-label">When to Visit</span>
+          <h2 class="section-heading section-heading--center">Opening Hours</h2>
+        </div>
+
+        <div class="hours-table">
+          <div class="hours-row" data-day="monday">
+            <span class="hours-row__day">Monday</span>
+            <span class="hours-row__time hours-row__time--closed">CLOSED</span>
+          </div>
+          <div class="hours-row" data-day="tuesday">
+            <span class="hours-row__day">Tuesday</span>
+            <span class="hours-row__time">11:00 AM &ndash; 8:00 PM</span>
+          </div>
+          <div class="hours-row" data-day="wednesday">
+            <span class="hours-row__day">Wednesday</span>
+            <span class="hours-row__time">11:00 AM &ndash; 8:00 PM</span>
+          </div>
+          <div class="hours-row" data-day="thursday">
+            <span class="hours-row__day">Thursday</span>
+            <span class="hours-row__time">11:00 AM &ndash; 8:00 PM</span>
+          </div>
+          <div class="hours-row" data-day="friday">
+            <span class="hours-row__day">Friday</span>
+            <span class="hours-row__time">11:00 AM &ndash; 8:00 PM</span>
+          </div>
+          <div class="hours-row" data-day="saturday">
+            <span class="hours-row__day">Saturday</span>
+            <span class="hours-row__time">12:00 PM &ndash; 9:00 PM</span>
+          </div>
+          <div class="hours-row" data-day="sunday">
+            <span class="hours-row__day">Sunday</span>
+            <span class="hours-row__time">12:00 PM &ndash; 6:00 PM</span>
+          </div>
+        </div>
+
+        <div class="text-center mt-xl">
+          <div class="status-badge">
+            <span class="status-badge__dot"></span>
+            Checking...
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GOOGLE MAP ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="map-container reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2570.5!2d-97.1467!3d49.8844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDUzJzA0LjAiTiA5N8KwMDgnNDguMCJX!5e0!3m2!1sen!2sca!4v1600000000000!5m2!1sen!2sca"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Jollof Life Restaurant location on Google Maps">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand -->
+        <div class="footer__brand">
+          <img src="https://jolloflife.ca/wp-content/uploads/2022/12/jolof-life-web-logo-white-1.png" alt="Jollof Life" class="footer__logo">
+          <p>
+            Your one-stop destination for authentic West African and Nigerian cuisine in Winnipeg.
+            Eat healthily. Deliver strength.
+          </p>
+          <div class="footer__social">
+            <a href="https://www.facebook.com/jollofliferestaurant/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/jollof_life.foods/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/12049632266" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:admin@jolloflife.ca" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer__heading">Quick Links</h4>
+          <div class="footer__links">
+            <a href="menu.html" class="footer__link">Our Menu</a>
+            <a href="about.html" class="footer__link">About Us</a>
+            <a href="catering.html" class="footer__link">Catering</a>
+            <a href="blog.html" class="footer__link">Blog</a>
+            <a href="contact.html" class="footer__link">Contact</a>
+          </div>
+        </div>
+
+        <!-- Order Online -->
+        <div>
+          <h4 class="footer__heading">Order Online</h4>
+          <div class="footer__links">
+            <a href="https://jollof-life-restaurant.square.site/" target="_blank" rel="noopener" class="footer__link">Order Direct (Square)</a>
+            <a href="https://www.ubereats.com/ca/store/jollof-life-restaurant/UQO6MkQCXqGsVrcTSQeHDg/" target="_blank" rel="noopener" class="footer__link">Uber Eats</a>
+            <a href="https://www.skipthedishes.com/jollof-rice-portage-avenue" target="_blank" rel="noopener" class="footer__link">Skip The Dishes</a>
+          </div>
+        </div>
+
+        <!-- Hours -->
+        <div>
+          <h4 class="footer__heading">Hours</h4>
+          <div class="footer__links" style="gap: 4px;">
+            <span class="footer__link">Mon: Closed</span>
+            <span class="footer__link">Tue-Fri: 11AM - 8PM</span>
+            <span class="footer__link">Sat: 12PM - 9PM</span>
+            <span class="footer__link">Sun: 12PM - 6PM</span>
+          </div>
+          <div style="margin-top: var(--space-lg);">
+            <div class="status-badge">
+              <span class="status-badge__dot"></span>
+              Checking...
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2024 Jollof Life Restaurant. All rights reserved.</span>
+        <span>600 Portage Ave, Winnipeg, MB R3C 3L7</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/form-handler.js"></script>
+</body>
+</html>

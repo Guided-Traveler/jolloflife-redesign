@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jollof Life — Authentic West African Cuisine in Winnipeg</title>
+  <meta name="description" content="Experience the best of West African and Nigerian cuisine at Jollof Life Restaurant. Over 100 authentic dishes, catering services, and online ordering. 600 Portage Ave, Winnipeg.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jollof Life — Authentic West African Cuisine in Winnipeg">
+  <meta property="og:description" content="Over 100 authentic Nigerian and West African dishes. Order online or visit us at 600 Portage Ave, Winnipeg.">
+  <meta property="og:type" content="restaurant">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Jollof Life Restaurant",
+    "image": "https://jolloflife.ca/wp-content/uploads/2022/12/jolof-life-web-logo-white-1.png",
+    "servesCuisine": ["Nigerian", "West African", "African"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "600 Portage Ave",
+      "addressLocality": "Winnipeg",
+      "addressRegion": "MB",
+      "postalCode": "R3C 3L7",
+      "addressCountry": "CA"
+    },
+    "telephone": "+12049632266",
+    "email": "admin@jolloflife.ca",
+    "url": "https://jolloflife.ca",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "11:00", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "11:00", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "11:00", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "11:00", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "12:00", "closes": "21:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "18:00" }
+    ],
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar--transparent">
+    <div class="container">
+      <a href="index.html" class="navbar__logo">
+        <img src="https://jolloflife.ca/wp-content/uploads/2022/12/jolof-life-web-logo-white-1.png" alt="Jollof Life">
+      </a>
+
+      <div class="navbar__links">
+        <a href="index.html" class="navbar__link navbar__link--active">Home</a>
+        <a href="menu.html" class="navbar__link">Menu</a>
+        <a href="about.html" class="navbar__link">About</a>
+        <a href="catering.html" class="navbar__link">Catering</a>
+        <a href="blog.html" class="navbar__link">Blog</a>
+        <a href="contact.html" class="navbar__link">Contact</a>
+        <a href="https://jollof-life-restaurant.square.site/" target="_blank" rel="noopener" class="navbar__cta">
+          <i class="fas fa-utensils"></i> Order Now
+        </a>
+      </div>
+
+      <button class="navbar__toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="menu.html" class="mobile-menu__link">Menu</a>
+    <a href="about.html" class="mobile-menu__link">About</a>
+    <a href="catering.html" class="mobile-menu__link">Catering</a>
+    <a href="blog.html" class="mobile-menu__link">Blog</a>
+    <a href="contact.html" class="mobile-menu__link">Contact</a>
+    <a href="https://jollof-life-restaurant.square.site/" target="_blank" rel="noopener" class="mobile-menu__link" style="color: var(--saffron);">Order Online</a>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="hero__bg" style="background-image: url('https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=1920&q=80');"></div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content">
+      <span class="hero__tagline">Eat Healthily, Deliver Strength</span>
+      <h1 class="hero__title">Authentic West African<br>Cuisine in Winnipeg</h1>
+      <p class="hero__subtitle">
+        From Jollof Rice to Egusi Soup — over 100 traditional Nigerian dishes
+        made with love, fresh ingredients, and time-honored recipes.
+      </p>
+      <div class="hero__actions">
+        <a href="menu.html" class="btn btn--primary btn--lg">Explore Our Menu</a>
+        <a href="https://jollof-life-restaurant.square.site/" target="_blank" rel="noopener" class="btn btn--outline btn--lg">Order Online</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll-hint">
+      <span>Discover More</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ========== FLOATING INFO BAR ========== -->
+  <section class="info-bar">
+    <div class="container">
+      <div class="info-bar__grid reveal-stagger">
+        <div class="info-bar__card">
+          <div class="info-bar__icon"><i class="fas fa-clock"></i></div>
+          <div>
+            <div class="info-bar__label">Opening Hours</div>
+            <div class="info-bar__value">Tue–Fri 11AM–8PM</div>
+          </div>
+        </div>
+        <div class="info-bar__card">
+          <div class="info-bar__icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <div class="info-bar__label">Visit Us</div>
+            <div class="info-bar__value">600 Portage Ave, Winnipeg</div>
+          </div>
+        </div>
+        <div class="info-bar__card">
+          <div class="info-bar__icon"><i class="fab fa-whatsapp"></i></div>
+          <div>
+            <div class="info-bar__label">WhatsApp / Call</div>
+            <div class="info-bar__value"><a href="https://wa.me/12049632266">(204) 963-2266</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHAT WE SERVE ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-3xl reveal">
+        <span class="section-label">Our Specialties</span>
+        <h2 class="section-heading section-heading--center">What We Serve</h2>
+        <p style="max-width: 600px; margin: 0 auto;">
+          Discover the rich flavors of West Africa through our carefully crafted dishes,
+          each one prepared with authentic ingredients and traditional techniques.
+        </p>
+      </div>
+
+      <div class="card-grid card-grid--3 reveal-stagger">
+        <!-- Jollof Rice -->
+        <a href="menu.html" class="dish-card">
+          <img src="https://images.unsplash.com/photo-1590166223826-12dee1677420?w=600&q=80" alt="Jollof Rice" class="dish-card__image">
+          <div class="dish-card__overlay">
+            <span class="dish-card__name">Jollof Rice</span>
+            <span class="dish-card__desc">The iconic West African one-pot rice with rich tomato and spices</span>
+          </div>
+        </a>
+
+        <!-- Egusi Soup -->
+        <a href="menu.html" class="dish-card">
+          <img src="https://images.unsplash.com/photo-1643293228196-1ad8cb251aee?w=600&q=80" alt="Egusi Soup" class="dish-card__image">
+          <div class="dish-card__overlay">
+            <span class="dish-card__name">Egusi Soup</span>
+            <span class="dish-card__desc">Rich melon seed soup with leafy greens and assorted proteins</span>
+          </div>
+        </a>
+
+        <!-- Suya -->
+        <a href="menu.html" class="dish-card">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=80" alt="Suya" class="dish-card__image">
+          <div class="dish-card__overlay">
+            <span class="dish-card__name">Suya</span>
+            <span class="dish-card__desc">Spicy grilled skewers seasoned with ground peanuts and chili</span>
+          </div>
+        </a>
+
+        <!-- Pounded Yam -->
+        <a href="menu.html" class="dish-card">
+          <img src="https://images.unsplash.com/photo-1567364241895-3135b8a50d1a?w=600&q=80" alt="Pounded Yam" class="dish-card__image">
+          <div class="dish-card__overlay">
+            <span class="dish-card__name">Pounded Yam</span>
+            <span class="dish-card__desc">Smooth, stretchy yam dough — the perfect companion to soups</span>
+          </div>
+        </a>
+
+        <!-- Ofada Rice -->
+        <a href="menu.html" class="dish-card">
+          <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&q=80" alt="Ofada Rice" class="dish-card__image">
+          <div class="dish-card__overlay">
+            <span class="dish-card__name">Exclusive Ofada</span>
+            <span class="dish-card__desc">Our signature — local Ofada rice with rich ayamase sauce</span>
+          </div>
+        </a>
+
+        <!-- Akara -->
+        <a href="menu.html" class="dish-card">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="Akara" class="dish-card__image">
+          <div class="dish-card__overlay">
+            <span class="dish-card__name">Akara</span>
+            <span class="dish-card__desc">Crispy bean fritters, golden outside and fluffy inside</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="text-center mt-2xl reveal">
+        <a href="menu.html" class="btn btn--outline-dark">View Full Menu <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY JOLLOF LIFE ========== -->
+  <section class="section section--dark pattern-overlay">
+    <div class="container">
+      <div class="text-center mb-3xl reveal">
+        <span class="section-label">Why Choose Us</span>
+        <h2 class="section-heading section-heading--center" style="color: var(--white);">The Jollof Life Difference</h2>
+      </div>
+
+      <div class="card-grid card-grid--3 reveal-stagger">
+        <div class="feature-card">
+          <div class="feature-card__icon"><i class="fas fa-fire-burner"></i></div>
+          <h3 class="feature-card__title">Authentic Recipes</h3>
+          <p class="feature-card__text">Traditional Nigerian dishes made with time-honored techniques passed through generations</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon"><i class="fas fa-leaf"></i></div>
+          <h3 class="feature-card__title">Fresh Ingredients</h3>
+          <p class="feature-card__text">Locally sourced produce combined with imported West African spices, prepared fresh daily</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon"><i class="fas fa-utensils"></i></div>
+          <h3 class="feature-card__title">Huge Selection</h3>
+          <p class="feature-card__text">
+            <span class="counter" data-counter="100" data-counter-suffix="+">0+</span>
+            <br>dishes on our menu — the largest West African selection in Winnipeg
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SIGNATURE DISH ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <div class="split__image reveal reveal--left">
+          <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=800&q=80" alt="Exclusive Ofada Rice">
+        </div>
+        <div class="split__content reveal reveal--right">
+          <span class="section-label">Our Signature</span>
+          <h2 class="section-heading">Exclusive Ofada</h2>
+          <p>
+            Our crown jewel — locally sourced Ofada rice served with our signature
+            ayamase (designer stew). This rich, peppery sauce made with green peppers,
+            locust beans, and palm oil creates an unforgettable flavor combination.
+          </p>
+          <p>
+            Whether you're a first-timer or a lifelong fan of Nigerian cuisine,
+            our Exclusive Ofada is the dish that keeps guests coming back.
+          </p>
+          <a href="https://jollof-life-restaurant.square.site/" target="_blank" rel="noopener" class="btn btn--primary mt-xl">
+            Order Now <i class="fas fa-external-link-alt" style="margin-left: 8px; font-size: 0.8em;"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ORDER PLATFORMS ========== -->
+  <section class="section section--warm-gray">
+    <div class="container">
+      <div class="text-center mb-3xl reveal">
+        <span class="section-label">Delivery & Pickup</span>
+        <h2 class="section-heading section-heading--center">Order Your Way</h2>
+        <p style="max-width: 500px; margin: 0 auto;">
+          Get your favourite West African dishes delivered to your door, or pick them up fresh from our kitchen.
+        </p>
+      </div>
+
+      <div class="card-grid card-grid--3 reveal-stagger">
+        <a href="https://jollof-life-restaurant.square.site/" target="_blank" rel="noopener" class="platform-card">
+          <div class="platform-card__icon"><i class="fas fa-store"></i></div>
+          <h3 class="platform-card__name">Order Direct</h3>
+          <p class="platform-card__desc">Order directly from us via Square — pickup or delivery</p>
+          <span class="btn btn--primary btn--sm">Order Now</span>
+        </a>
+
+        <a href="https://www.ubereats.com/ca/store/jollof-life-restaurant/UQO6MkQCXqGsVrcTSQeHDg/" target="_blank" rel="noopener" class="platform-card">
+          <div class="platform-card__icon"><i class="fas fa-car"></i></div>
+          <h3 class="platform-card__name">Uber Eats</h3>
+          <p class="platform-card__desc">Get it delivered through Uber Eats across Winnipeg</p>
+          <span class="btn btn--primary btn--sm">Order Now</span>
+        </a>
+
+        <a href="https://www.skipthedishes.com/jollof-rice-portage-avenue" target="_blank" rel="noopener" class="platform-card">
+          <div class="platform-card__icon"><i class="fas fa-bicycle"></i></div>
+          <h3 class="platform-card__name">Skip The Dishes</h3>
+          <p class="platform-card__desc">Fast delivery with Skip — your Jollof is just a tap away</p>
+          <span class="btn btn--primary btn--sm">Order Now</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-2xl reveal">
+        <span class="section-label">What People Say</span>
+        <h2 class="section-heading section-heading--center">Loved by Winnipeg</h2>
+      </div>
+
+      <div class="testimonial-slider reveal">
+        <div class="testimonial-track">
+          <div class="testimonial">
+            <div class="testimonial__quote-mark">&ldquo;</div>
+            <div class="testimonial__stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial__text">
+              The best Jollof Rice I've had outside of Lagos. Authentic flavors, generous portions,
+              and the staff makes you feel like family. This place is a gem.
+            </p>
+            <div class="testimonial__author">Adaeze O.</div>
+            <div class="testimonial__role">Regular Customer</div>
+          </div>
+
+          <div class="testimonial">
+            <div class="testimonial__quote-mark">&ldquo;</div>
+            <div class="testimonial__stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial__text">
+              Jollof Life catered our company event for 80 people and every single dish was incredible.
+              The Suya was gone in minutes. Already planning our next order!
+            </p>
+            <div class="testimonial__author">Michael R.</div>
+            <div class="testimonial__role">Corporate Event — Bell MTS</div>
+          </div>
+
+          <div class="testimonial">
+            <div class="testimonial__quote-mark">&ldquo;</div>
+            <div class="testimonial__stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial__text">
+              As someone who grew up eating Nigerian food, I can tell you Jollof Life is the real deal.
+              The Egusi, the Pounded Yam, the Ofada — it all takes me home. Bless this place.
+            </p>
+            <div class="testimonial__author">Chika N.</div>
+            <div class="testimonial__role">Winnipeg Foodie</div>
+          </div>
+        </div>
+
+        <div class="testimonial-dots">
+          <button class="testimonial-dot testimonial-dot--active" aria-label="Slide 1"></button>
+          <button class="testimonial-dot" aria-label="Slide 2"></button>
+          <button class="testimonial-dot" aria-label="Slide 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CATERING CTA BANNER ========== -->
+  <section class="cta-banner">
+    <div class="cta-banner__bg" style="background-image: url('https://images.unsplash.com/photo-1555244162-803834f70033?w=1920&q=80');"></div>
+    <div class="cta-banner__overlay"></div>
+    <div class="container cta-banner__content reveal">
+      <h2 class="cta-banner__title">Planning an Event?</h2>
+      <p class="cta-banner__text">
+        From corporate lunches to weddings and festivals — let Jollof Life bring the
+        flavors of West Africa to your next gathering. Custom menus, professional service,
+        and food that your guests will rave about.
+      </p>
+      <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+        <a href="catering.html" class="btn btn--primary btn--lg">Learn About Catering</a>
+        <a href="https://wa.me/12049632266" target="_blank" rel="noopener" class="btn btn--whatsapp btn--lg">
+          <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY / INSTAGRAM ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-2xl reveal">
+        <span class="section-label">@jollof_life.foods</span>
+        <h2 class="section-heading section-heading--center">Follow the Flavor</h2>
+      </div>
+    </div>
+    <div class="gallery-grid reveal-stagger">
+      <a href="https://www.instagram.com/jollof_life.foods/" target="_blank" rel="noopener" class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=400&q=80" alt="Nigerian food">
+        <div class="gallery-item__overlay"><i class="fab fa-instagram"></i></div>
+      </a>
+      <a href="https://www.instagram.com/jollof_life.foods/" target="_blank" rel="noopener" class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1590166223826-12dee1677420?w=400&q=80" alt="Jollof Rice">
+        <div class="gallery-item__overlay"><i class="fab fa-instagram"></i></div>
+      </a>
+      <a href="https://www.instagram.com/jollof_life.foods/" target="_blank" rel="noopener" class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80" alt="Grilled meats">
+        <div class="gallery-item__overlay"><i class="fab fa-instagram"></i></div>
+      </a>
+      <a href="https://www.instagram.com/jollof_life.foods/" target="_blank" rel="noopener" class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1567364241895-3135b8a50d1a?w=400&q=80" alt="African dish">
+        <div class="gallery-item__overlay"><i class="fab fa-instagram"></i></div>
+      </a>
+      <a href="https://www.instagram.com/jollof_life.foods/" target="_blank" rel="noopener" class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1643293228196-1ad8cb251aee?w=400&q=80" alt="Nigerian soup">
+        <div class="gallery-item__overlay"><i class="fab fa-instagram"></i></div>
+      </a>
+      <a href="https://www.instagram.com/jollof_life.foods/" target="_blank" rel="noopener" class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400&q=80" alt="Rice dish">
+        <div class="gallery-item__overlay"><i class="fab fa-instagram"></i></div>
+      </a>
+      <a href="https://www.instagram.com/jollof_life.foods/" target="_blank" rel="noopener" class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80" alt="Fresh food">
+        <div class="gallery-item__overlay"><i class="fab fa-instagram"></i></div>
+      </a>
+      <a href="https://www.instagram.com/jollof_life.foods/" target="_blank" rel="noopener" class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=400&q=80" alt="Food spread">
+        <div class="gallery-item__overlay"><i class="fab fa-instagram"></i></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== NEWSLETTER ========== -->
+  <section class="section section--dark pattern-overlay">
+    <div class="container">
+      <div class="text-center reveal" style="max-width: 600px; margin: 0 auto;">
+        <span class="section-label">Stay Connected</span>
+        <h2 class="section-heading section-heading--center" style="color: var(--white);">Get Exclusive Offers</h2>
+        <p style="color: rgba(255,255,255,0.7); margin-bottom: var(--space-2xl);">
+          Subscribe to our newsletter for special deals, new menu items, and a taste of Nigerian food culture delivered to your inbox.
+        </p>
+        <form style="display: flex; gap: var(--space-sm); max-width: 480px; margin: 0 auto;" onsubmit="event.preventDefault(); this.querySelector('button').textContent = 'Subscribed!'; this.querySelector('input').value = '';">
+          <input type="email" placeholder="Your email address" required
+            style="flex: 1; padding: 0.85rem 1.2rem; border: 2px solid rgba(255,255,255,0.2); border-radius: 50px; background: rgba(255,255,255,0.08); color: var(--white); outline: none; font-size: 0.95rem;"
+          >
+          <button type="submit" class="btn btn--primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand -->
+        <div class="footer__brand">
+          <img src="https://jolloflife.ca/wp-content/uploads/2022/12/jolof-life-web-logo-white-1.png" alt="Jollof Life" class="footer__logo">
+          <p>
+            Your one-stop destination for authentic West African and Nigerian cuisine in Winnipeg.
+            Eat healthily. Deliver strength.
+          </p>
+          <div class="footer__social">
+            <a href="https://www.facebook.com/jollofliferestaurant/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/jollof_life.foods/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/12049632266" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:admin@jolloflife.ca" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer__heading">Quick Links</h4>
+          <div class="footer__links">
+            <a href="menu.html" class="footer__link">Our Menu</a>
+            <a href="about.html" class="footer__link">About Us</a>
+            <a href="catering.html" class="footer__link">Catering</a>
+            <a href="blog.html" class="footer__link">Blog</a>
+            <a href="contact.html" class="footer__link">Contact</a>
+          </div>
+        </div>
+
+        <!-- Order Online -->
+        <div>
+          <h4 class="footer__heading">Order Online</h4>
+          <div class="footer__links">
+            <a href="https://jollof-life-restaurant.square.site/" target="_blank" rel="noopener" class="footer__link">Order Direct (Square)</a>
+            <a href="https://www.ubereats.com/ca/store/jollof-life-restaurant/UQO6MkQCXqGsVrcTSQeHDg/" target="_blank" rel="noopener" class="footer__link">Uber Eats</a>
+            <a href="https://www.skipthedishes.com/jollof-rice-portage-avenue" target="_blank" rel="noopener" class="footer__link">Skip The Dishes</a>
+          </div>
+        </div>
+
+        <!-- Hours -->
+        <div>
+          <h4 class="footer__heading">Hours</h4>
+          <div class="footer__links" style="gap: 4px;">
+            <span class="footer__link">Mon: Closed</span>
+            <span class="footer__link">Tue–Fri: 11AM – 8PM</span>
+            <span class="footer__link">Sat: 12PM – 9PM</span>
+            <span class="footer__link">Sun: 12PM – 6PM</span>
+          </div>
+          <div style="margin-top: var(--space-lg);">
+            <div class="status-badge">
+              <span class="status-badge__dot"></span>
+              Checking...
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2024 Jollof Life Restaurant. All rights reserved.</span>
+        <span>600 Portage Ave, Winnipeg, MB R3C 3L7</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+/* ============================================
+   JOLLOF LIFE — Animations & Scroll Reveals
+   ============================================ */
+
+/* --- Scroll Reveal Base --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal--active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Directional variants */
+.reveal--left {
+  transform: translateX(-60px);
+}
+
+.reveal--left.reveal--active {
+  transform: translateX(0);
+}
+
+.reveal--right {
+  transform: translateX(60px);
+}
+
+.reveal--right.reveal--active {
+  transform: translateX(0);
+}
+
+.reveal--scale {
+  transform: scale(0.9);
+}
+
+.reveal--scale.reveal--active {
+  transform: scale(1);
+}
+
+/* --- Staggered Children --- */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-stagger--active > *:nth-child(1)  { transition-delay: 0ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger--active > *:nth-child(2)  { transition-delay: 80ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger--active > *:nth-child(3)  { transition-delay: 160ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger--active > *:nth-child(4)  { transition-delay: 240ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger--active > *:nth-child(5)  { transition-delay: 320ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger--active > *:nth-child(6)  { transition-delay: 400ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger--active > *:nth-child(7)  { transition-delay: 480ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger--active > *:nth-child(8)  { transition-delay: 560ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger--active > *:nth-child(9)  { transition-delay: 640ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger--active > *:nth-child(10) { transition-delay: 720ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger--active > *:nth-child(11) { transition-delay: 800ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger--active > *:nth-child(12) { transition-delay: 880ms; opacity: 1; transform: translateY(0); }
+
+/* --- Hero Entrance Animations --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hero element entrance sequence */
+.hero__tagline {
+  opacity: 0;
+  animation: fadeInDown 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+}
+
+.hero__title {
+  opacity: 0;
+  animation: fadeInUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards;
+}
+
+.hero__subtitle {
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+
+.hero__actions {
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+}
+
+.hero__scroll-hint {
+  opacity: 0;
+  animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1.2s forwards;
+}
+
+/* --- Menu Card Entrance --- */
+@keyframes menuCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.menu-card {
+  animation: menuCardIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
+}
+
+/* --- Decorative Line Grow --- */
+@keyframes lineGrow {
+  from { width: 0; }
+  to { width: 60px; }
+}
+
+/* --- Number Counter Glow --- */
+@keyframes counterGlow {
+  0%, 100% { text-shadow: none; }
+  50% { text-shadow: 0 0 30px rgba(232,163,23,0.4); }
+}
+
+.counter--animating {
+  animation: counterGlow 2s ease-in-out;
+}
+
+/* --- WhatsApp Button Pulse --- */
+@keyframes whatsappPulse {
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+
+.btn--whatsapp {
+  animation: whatsappPulse 2s infinite;
+}
+
+/* --- Shimmer effect for loading states --- */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--warm-gray) 25%,
+    var(--warm-gray-2) 50%,
+    var(--warm-gray) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* --- Parallax helper --- */
+.parallax-bg {
+  will-change: transform;
+  transition: none;
+}
+
+/* --- Nav transition --- */
+.navbar {
+  transition: background-color 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              backdrop-filter 0.4s;
+}
+
+.navbar--solid {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* --- Image placeholder pattern (when no image is loaded) --- */
+.placeholder-pattern {
+  background-color: var(--warm-gray);
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C48A0F' fill-opacity='0.08'%3E%3Cpath d='M40 0L20 20 40 40 60 20zM0 40l20 20 20-20-20-20zM40 40l20 20 20-20-20-20zM20 60L0 80h40z M60 60l20 20V60z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-pattern i {
+  font-size: 2rem;
+  color: var(--saffron);
+  opacity: 0.4;
+}
