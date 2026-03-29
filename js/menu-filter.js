@@ -35,7 +35,7 @@ const menuItems = [
   { name: "Beef Suya", category: "sides", description: "Smoky grilled beef skewers coated in spicy ground peanut and chili mix", image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=80", popular: true, special: false },
   { name: "Moi Moi", category: "sides", description: "Steamed bean pudding with eggs, corned beef, and peppers — rich and savory", image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80", popular: true, special: false },
   { name: "Akara", category: "sides", description: "Deep-fried bean cakes — crispy on the outside, fluffy and seasoned inside", image: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80", popular: false, special: true },
-  { name: "Fried Plantain (Dodo)", category: "sides", description: "Sweet ripe plantain slices fried to golden perfection — the perfect side", image: "https://images.unsplash.com/photo-1528825871115-3581a5e31e37?w=600&q=80", popular: true, special: false },
+  { name: "Fried Plantain (Dodo)", category: "sides", description: "Sweet ripe plantain slices fried to golden perfection — the perfect side", image: "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=600&q=80", popular: true, special: false },
   { name: "Coleslaw", category: "sides", description: "Fresh, creamy coleslaw with shredded cabbage, carrots, and a tangy dressing", image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80", popular: false, special: false },
   { name: "Puff Puff", category: "sides", description: "Fried dough balls — light, airy, and dusted with sugar. The perfect snack", image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&q=80", popular: false, special: false },
   { name: "Nigerian Meat Pie", category: "sides", description: "Golden pastry filled with seasoned ground beef, potatoes, and carrots", image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&q=80", popular: false, special: false },
@@ -44,7 +44,7 @@ const menuItems = [
   // --- Breakfast ---
   { name: "Akamu (Ogi/Pap)", category: "breakfast", description: "Smooth corn porridge served warm — a traditional Nigerian breakfast staple", image: "https://images.unsplash.com/photo-1517673132405-a56a62b18caf?w=600&q=80", popular: false, special: false },
   { name: "Akara & Pap", category: "breakfast", description: "Classic breakfast combo — crispy bean fritters with warm corn porridge", image: "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=600&q=80", popular: false, special: false },
-  { name: "Ewa Agoyin", category: "breakfast", description: "Mashed beans served with a fiery dried pepper sauce — bold and satisfying", image: "https://images.unsplash.com/photo-1543339308-d595c4590fc5?w=600&q=80", popular: false, special: true },
+  { name: "Ewa Agoyin", category: "breakfast", description: "Mashed beans served with a fiery dried pepper sauce — bold and satisfying", image: "https://images.unsplash.com/photo-1546549032-9571cd6b27df?w=600&q=80", popular: false, special: true },
 
   // --- Drinks ---
   { name: "Zobo", category: "drinks", description: "Chilled hibiscus flower drink infused with ginger, cloves, and pineapple", image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&q=80", popular: true, special: false },

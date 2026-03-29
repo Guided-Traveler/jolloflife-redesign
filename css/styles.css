@@ -285,7 +285,7 @@ p {
 }
 
 .navbar__logo img {
-  height: 48px;
+  height: 64px;
   width: auto;
 }
 
@@ -1616,6 +1616,7 @@ p {
   .container { padding: 0 var(--space-lg); }
   .section { padding: var(--space-3xl) 0; }
 
+  .navbar__logo img { height: 52px; }
   .navbar__links { display: none; }
   .navbar__toggle { display: flex; }
 
@@ -1642,6 +1643,88 @@ p {
   h1 { font-size: 2rem; }
   .hero__title { font-size: 2.2rem; }
   .btn { padding: 0.75rem 1.5rem; font-size: 0.9rem; }
+}
+
+/* --- Sticky Order Bar (all pages) --- */
+.order-bar {
+  background: var(--dark-surface);
+  padding: var(--space-md) 0;
+  text-align: center;
+  border-top: 2px solid var(--saffron);
+}
+
+.order-bar .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.order-bar__text {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.order-bar__links {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.order-bar__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--saffron-light);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(232,163,23,0.3);
+  border-radius: 50px;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.order-bar__link:hover {
+  background: var(--saffron);
+  color: var(--charcoal);
+  border-color: var(--saffron);
+}
+
+/* Mobile sticky order button */
+.mobile-order-sticky {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--dark-surface);
+  border-top: 2px solid var(--saffron);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+}
+
+.mobile-order-sticky a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  width: 100%;
+  padding: 0.9rem;
+  background: var(--gradient-gold);
+  color: var(--charcoal);
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 50px;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .mobile-order-sticky { display: block; }
+  body { padding-bottom: 70px; }
+  .order-bar { display: none; }
 }
 
 /* Reduced motion */
