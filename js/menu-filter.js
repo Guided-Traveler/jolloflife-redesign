@@ -4,7 +4,7 @@
 
 const menuItems = [
   // --- Rice Dishes ---
-  { name: "Jollof Rice", category: "rice", description: "The iconic one-pot rice cooked in a rich tomato, pepper, and onion sauce with aromatic spices", image: "https://images.unsplash.com/photo-1590166223826-12dee1677420?w=600&q=80", popular: true, special: false },
+  { name: "Jollof Rice", category: "rice", description: "The iconic one-pot rice cooked in a rich tomato, pepper, and onion sauce with aromatic spices", image: "https://images.unsplash.com/photo-1574484284002-952d92456975?w=600&q=80", popular: true, special: false },
   { name: "Fried Rice", category: "rice", description: "Nigerian-style fried rice with mixed vegetables, liver, and seasoned to perfection", image: "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&q=80", popular: false, special: false },
   { name: "Coconut Rice", category: "rice", description: "Fragrant rice cooked in creamy coconut milk with a hint of sweetness and spice", image: "https://images.unsplash.com/photo-1516714435131-44d6b64dc6a2?w=600&q=80", popular: false, special: false },
   { name: "Exclusive Ofada Rice", category: "rice", description: "Our signature — local Ofada rice served with rich ayamase designer stew", image: "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=600&q=80", popular: true, special: true },
