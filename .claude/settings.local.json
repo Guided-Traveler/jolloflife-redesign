@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -roh 'photo-[0-9a-f]\\\\{16,\\\\}' --include='*.html' --include='*.js')",
+      "WebFetch(domain:unsplash.com)",
+      "WebFetch(domain:images.unsplash.com)",
+      "WebSearch",
+      "Bash(node jolloflife-audit.js)",
+      "Bash(npm install:*)",
+      "Bash(curl -sL -o 02_egusi_v2.jpg \"https://images.unsplash.com/photo-1643293228196-1ad8cb251aee?w=600&h=400&fit=crop\")",
+      "Bash(curl -sL -o 04_pounded_yam_v2.jpg \"https://images.unsplash.com/photo-1567364241895-3135b8a50d1a?w=600&h=400&fit=crop\")",
+      "WebFetch(domain:www.pexels.com)"
+    ]
+  }
+}
