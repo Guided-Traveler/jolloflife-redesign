@@ -1645,6 +1645,65 @@ p {
   .btn { padding: 0.75rem 1.5rem; font-size: 0.9rem; }
 }
 
+/* --- Hero Platform Strip (above the fold) --- */
+.hero__platforms {
+  margin-top: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.hero__platforms-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.5);
+  font-weight: 600;
+}
+
+.hero__platforms-links {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero__platform-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0.55rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: rgba(255,255,255,0.12);
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.hero__platform-btn:hover {
+  background: var(--saffron);
+  color: var(--charcoal);
+  border-color: var(--saffron);
+  transform: translateY(-2px);
+}
+
+.hero__platform-btn--uber:hover {
+  background: #06C167;
+  border-color: #06C167;
+  color: var(--white);
+}
+
+.hero__platform-btn--skip:hover {
+  background: #FF6B00;
+  border-color: #FF6B00;
+  color: var(--white);
+}
+
 /* --- Sticky Order Bar (all pages) --- */
 .order-bar {
   background: var(--dark-surface);
@@ -1692,7 +1751,7 @@ p {
   border-color: var(--saffron);
 }
 
-/* Mobile sticky order button */
+/* Mobile sticky order bar — 3 platforms */
 .mobile-order-sticky {
   display: none;
   position: fixed;
@@ -1700,30 +1759,46 @@ p {
   left: 0;
   right: 0;
   z-index: 900;
-  padding: var(--space-md) var(--space-lg);
+  padding: var(--space-sm) var(--space-md);
   background: var(--dark-surface);
   border-top: 2px solid var(--saffron);
   box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
 }
 
-.mobile-order-sticky a {
+.mobile-order-sticky__links {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.mobile-order-sticky__btn {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-sm);
-  width: 100%;
-  padding: 0.9rem;
+  gap: 6px;
+  padding: 0.75rem 0.5rem;
   background: var(--gradient-gold);
   color: var(--charcoal);
   font-weight: 700;
-  font-size: 1rem;
-  border-radius: 50px;
-  letter-spacing: 0.02em;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.mobile-order-sticky__btn--uber {
+  background: #06C167;
+  color: var(--white);
+}
+
+.mobile-order-sticky__btn--skip {
+  background: #FF6B00;
+  color: var(--white);
 }
 
 @media (max-width: 768px) {
   .mobile-order-sticky { display: block; }
-  body { padding-bottom: 70px; }
+  body { padding-bottom: 65px; }
   .order-bar { display: none; }
 }
 
